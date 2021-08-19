@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Try Your Luck
+        <div></div>
+    <button>One</button><button>Two</button><button>Three</button>
+    </h1>
+    <script>
+        const updateDiv = (update) => {
+            const div = document.querySelector("div")
+            div.innerHTML = update()
+        }
+
+        const updateOne = () => "<h1>Hello World</h1>"
+        const updateTwo = () => "<h2>You WIN </h2>"
+        const updateThree = () => "<h3>Bad Choice</h3>"
+
+        const funcs = [updateOne, updateTwo, updateThree]
+        const buttons = document.querySelectorAll("button")
+        buttons.forEach((item, index) => {
+            item.addEventListener("click", () => {
+                updateDiv(funcs[index])
+            })
+        })
+    </script>
+</body>
+</html>
