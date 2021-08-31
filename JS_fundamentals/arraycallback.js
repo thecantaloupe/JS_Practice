@@ -9,13 +9,13 @@ const dogs = [
     {name: "Clifford", age: 1, owner: "", adopted: false},
     {name: "Bruiser", age: 8, owner: "Sam", adopted: true},
     {name: "Frodo", age: 3, owner: "", adopted: false},
-  ]
+]
 
-  //MAP
-  // const result = array.map((item,index)=>{})
+//MAP
+// const result = array.map((item,index)=>{})
 
 
-  // Initialize new obj to maintain old obj, don't modify original 
+// Initialize new obj to maintain old obj, don't modify original 
 //   const result = dogs.map((item,index) => {
 //       const newDogs = {...item}
 //       newDogs.id = index
@@ -164,3 +164,5 @@ const dogs = [
 const result =  dogs.reduce((acc, el) => {return el.adopted ? acc+1 : acc},0)
 
 console.log(result)
+
+
